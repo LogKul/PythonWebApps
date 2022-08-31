@@ -24,3 +24,11 @@ img {
     margin: 3em;
     max-width: 80%;
 }
+
+.greenText {
+    color: green;
+}
+
+.orangeText {
+    color: orange
+}
