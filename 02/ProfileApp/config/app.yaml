@@ -28,7 +28,7 @@ static_sites:
   github:
     branch: main
     deploy_on_push: true
-    repo: Mark-Seaman/PythonWebApps
+    repo: LogKul/PythonWebApps
   name: webapps-demo-static
   routes:
   - path: /static
