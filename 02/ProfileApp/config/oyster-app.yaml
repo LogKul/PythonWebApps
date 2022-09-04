@@ -1,0 +1,12 @@
+name: oyster-app
+region: nyc
+static_sites:
+- environment_slug: python
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: LogKul/PythonWebApps
+  name: pythonwebapps-02-profile-app
+  routes:
+  - path: /
+  source_dir: 02/ProfileApp/static
