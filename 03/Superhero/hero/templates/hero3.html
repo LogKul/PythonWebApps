@@ -1,6 +1,30 @@
-<h1>{{ title }}</h1>
-<p>{{ body }}</p>
-<img src="{{ image }}" alt="{{ image }}" width="300">
-<p>
-    <a href=".">Show all heroes</a>
-</p>
+<link rel="stylesheet" href="/static/base.css">
+<link rel="stylesheet" href="/static/trends.css">
+<link rel="stylesheet" href="/static/video.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<body class="lightredbg">
+    <br><br><br><br><br>
+    <div class="transcriptarea m-auto betterredborder">
+
+        <h1>{{ title }}</h1>
+        <br>
+        <hr>
+
+        <br>
+        <p>{{ body }}</p>
+        <br>
+
+        <img class="betterredborder" src="{{ image }}" alt="{{ image }}" width="300">
+
+        <br>
+        <hr>
+        <br>
+
+        <p>
+            <a href=".">Show all heroes</a>
+        </p>
+
+    </div>
+</body>
