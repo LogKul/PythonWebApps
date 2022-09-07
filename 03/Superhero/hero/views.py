@@ -5,34 +5,34 @@ class IndexView(TemplateView):
     template_name = 'heroes.html'
 
 
-class HulkView(TemplateView):
-    template_name = 'hero.html'
+class MobView(TemplateView):
+    template_name = 'hero1.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Hulk',
-            'body': 'My name is Bruce Banner',
-            'image': '/static/images/hulk.jpg'
+            'title': 'Mob',
+            'body': 'His name is Mob, from the tv series Mob Psycho 100.',
+            'image': '/static/images/mob.jpg'
         }
 
 
-class IronManView(TemplateView):
-    template_name = "hero.html"
+class WayneView(TemplateView):
+    template_name = "hero2.html"
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Iron Man',
-            'body': 'My name is Tony Stark, but I am Iron Man',
-            'image': '/static/images/iron_man.jpg'
+            'title': 'Wayne',
+            'body': 'This is Wayne, from the games Hylics and Hylics 2.',
+            'image': '/static/images/wayne.jpg'
         }
 
 
-class BlackWidow(TemplateView):
-    template_name = 'hero.html'
+class SuperMonkeyView(TemplateView):
+    template_name = 'hero3.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Black Widow',
-            'body': 'My name is Natasha Romanova',
-            'image': '/static/images/black_widow.jpg'
+            'title': 'Super Monkey',
+            'body': 'This is the Super Monkey from Bloons Tower Defense.',
+            'image': '/static/images/supermonkey.jpg'
         }
