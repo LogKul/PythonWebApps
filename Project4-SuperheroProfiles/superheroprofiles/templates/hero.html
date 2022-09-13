@@ -9,18 +9,22 @@
 <br><hr><br><br>
 
 <br>
-<h2>Bio</h2>
+<h2>Bio</h2><br>
 <p>{{ bio }}</p>
 <br>
 
 <br>
-<h2>Strengths</h2>
-<p>{{ strengths }}</p>
+<h2>Strengths</h2><br>
+{% for iter, strength in strengths.items %}
+    <p>{{ iter }}.) {{ strength }}</p>
+{% endfor %}
 <br>
 
 <br>
-<h2>Weaknesses</h2>
-<p>{{ weaknesses }}</p>
+<h2>Weaknesses</h2><br>
+{% for iter, weakness in weaknesses.items %}
+    <p>{{ iter }}.) {{ weakness }}</p>
+{% endfor %}
 <br>
 
 <br><br><hr>
