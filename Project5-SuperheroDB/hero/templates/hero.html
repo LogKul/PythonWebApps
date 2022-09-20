@@ -1,0 +1,18 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+<h1>{{ hero.name|title }}</h1>
+<br>
+<hr>
+
+<img src="{{ hero.image }}" alt="{{ hero.name }}" height="300">
+<br><hr><br><br>
+
+<br>
+<h2>Description</h2><br>
+<p>{{ hero.description }}</p>
+<br>
+
+<br><br><hr>
+<a href="../">Back to Heroes List</a>
+{% endblock content %}
