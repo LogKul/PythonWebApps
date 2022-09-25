@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from .models import Superhero
+from .models import *
 
 
 # Create your views here.
@@ -17,5 +17,7 @@ class HeroDetailView(TemplateView):
     def get_context_data(self, **kwargs):
         #image_path = f'/static/images/{hero_name}.jpg'
         return {
-            'hero': Superhero.objects.get(pk=kwargs['pk'])
+            'hero': Superhero.objects.get(pk=kwargs['pk']),
+            'strengths': Strength.objects.filter(hero=kwargs['pk']),
+            'weaknesses': Weakness.objects.filter(hero=kwargs['pk'])
         }
