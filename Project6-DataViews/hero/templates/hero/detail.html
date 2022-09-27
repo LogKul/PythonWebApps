@@ -1,0 +1,34 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+<br>
+<h3>Superhero Details</h3>
+<br>
+<h1>{{ hero.name|title }}</h1>
+<br>
+<hr>
+
+<img src="{{ hero.image }}" alt="{{ hero.name }}" height="300">
+<br><hr><br><br>
+
+<br>
+<h2>Bio</h2><br>
+<p>{{ hero.description }}</p>
+<br>
+
+<br>
+<h2>Strengths</h2><br>
+<p>{{ hero.strength }}</p>
+<br>
+
+<br>
+<h2>Weaknesses</h2><br>
+<p>{{ hero.weakness }}</p>
+<br>
+
+<a class="btn btn-outline-danger m-5" href="{{ hero.pk }}/">Edit Hero</a>
+<a class="btn btn-outline-danger m-5" href="{{ hero.pk }}/delete">Delete Hero</a>
+
+<br><br><hr>
+<a href="../">Back to Heroes List</a>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+<h1>{{ hero.name|title }}</h1>
+<br>
+<hr>
+
+<img src="{{ hero.image }}" alt="{{ hero.name }}" height="300">
+<br><hr><br><br>
+
+<br>
+<h2>Bio</h2><br>
+<p>{{ hero.bio }}</p>
+<br>
+
+<br>
+<h2>Strengths</h2><br>
+{% for thing in strengths %}
+    <p>{{ thing.key }}.) {{ thing.strength }}</p>
+{% endfor %}
+<br>
+
+<br>
+<h2>Weaknesses</h2><br>
+{% for thing in weaknesses %}
+    <p>{{ thing.key }}.) {{ thing.weakness }}</p>
+{% endfor %}
+<br>
+
+<br><br><hr>
+<a href="../">Back to Heroes List</a>
+{% endblock content %}
