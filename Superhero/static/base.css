@@ -1,0 +1,47 @@
+nav>div>p {
+    line-height: 9px;
+}
+
+nav>div {
+    width: 20%;
+    background-color: rgb(255, 200, 200);
+    border: 2px solid red;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+    float: left;
+    margin: 16px;
+}
+
+.lightredbg {
+    background-color: lightcoral;
+}
+
+.redborder {
+    border: ridge 4px red;
+}
+
+a:link {
+    color: orange;
+}
+
+a:visited {
+    color: lightcoral;
+}
+
+a:hover {
+    color: magenta;
+}
+
+a:active {
+    color: green;
+}
+
+/* just a comment v1.1 */

@@ -1,0 +1,29 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+<h1>Superhero News</h1>
+<br><br><br>
+<div class="row">
+
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>Identity</th>
+        </tr>
+
+        {% for hero in heroes %}
+        <tr>
+            <td><a href="{{ hero.pk }}">{{ hero.name }}</a></td>
+            <td>{{ hero.identity }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <p>
+        <a href="add" class="btn btn-outline-danger m-5">Add New Superhero</a>
+    </p>
+
+</div>
+
+{% endblock content %}
