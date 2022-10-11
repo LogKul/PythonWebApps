@@ -1,17 +1,17 @@
 {% extends 'superhero_theme.html' %}
-
-{% block title %}
-Delete Hero
-{% endblock title %}
-
+{% load crispy_forms_tags %}
 
 {% block content %}
-
+<h1>Edit Article</h1>
+<br>
 <div class="container m-5">
 
     <form action="" method="post">{% csrf_token %}
-        <p>Are you sure you want to delete "{{ object.title }}"?</p>
-        <input type="submit" value="Confirm">
+
+        {{ form|crispy }}
+
+        <button class="btn btn-outline-danger m-5" type="submit">Save Article</button>
+
     </form>
 
 </div>

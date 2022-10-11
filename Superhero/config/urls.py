@@ -25,6 +25,13 @@ urlpatterns = [
     path('<int:pk>/', HeroEditView.as_view(), name='hero_edit'),
     path('<int:pk>/delete', HeroDeleteView.as_view(), name='hero_delete'),
 
+    path('articles/', ArticleListView.as_view(), name='article_list'),
+    path('articles/<int:pk>', ArticleDetailView.as_view(), name='article_detail'),
+    path('articles/add', ArticleAddView.as_view(), name='article_add'),
+    path('articles/<int:pk>/', ArticleEditView.as_view(), name='article_edit'),
+    path('articles/<int:pk>/delete',
+         ArticleDeleteView.as_view(), name='article_delete'),
+
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/<int:pk>/', UserUpdateView.as_view(), name='user_edit'),
     path('accounts/add/', UserAddView.as_view(), name='user_add'),

@@ -20,9 +20,11 @@
 
     </table>
 
+    {% if user.is_authenticated %}
     <p>
         <a href="add" class="btn btn-outline-danger m-5">Add New Superhero</a>
     </p>
+    {% endif %}
 
 </div>
 

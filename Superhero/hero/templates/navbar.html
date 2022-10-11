@@ -9,7 +9,15 @@
                 <a class="nav-link text-dark" href="{% url 'hero_list' %}">Superheros</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'article_list' %}">Article List</a>
+            </li>
+
             {% if user.is_authenticated %}
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'article_add' %}">Write Article</a>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link  text-dark " href="{% url 'logout' %}">Hello {{ user.username }}</a>

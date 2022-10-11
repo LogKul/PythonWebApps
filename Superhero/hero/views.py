@@ -8,6 +8,8 @@ from .models import *
 
 # Create your views here.
 
+# USER VIEWS
+
 
 class UserAddView(CreateView):
     form_class = UserCreationForm
@@ -22,6 +24,7 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('author_home')
 
 
+# HERO VIEWS
 class HeroListView(ListView):
     template_name = 'hero/list.html'
     model = Superhero
@@ -50,3 +53,38 @@ class HeroDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'hero/delete.html'
     model = Superhero
     success_url = reverse_lazy('hero_list')
+
+
+# ARTICLE VIEWS
+class ArticleListView(ListView):
+    template_name = 'article/list.html'
+    model = Article
+    context_object_name = 'articles'
+
+
+class ArticleDetailView(DetailView):
+    template_name = 'article/detail.html'
+    model = Article
+    context_object_name = 'article'
+
+
+class ArticleAddView(LoginRequiredMixin, CreateView):
+    template_name = 'article/add.html'
+    model = Article
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)
+
+
+class ArticleEditView(LoginRequiredMixin, UpdateView):
+    template_name = 'article/edit.html'
+    model = Article
+    fields = ['title', 'content']
+
+
+class ArticleDeleteView(LoginRequiredMixin, DeleteView):
+    template_name = 'article/delete.html'
+    model = Article
+    success_url = reverse_lazy('article_list')
