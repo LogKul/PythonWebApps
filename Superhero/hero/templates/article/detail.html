@@ -1,9 +1,11 @@
 {% extends 'superhero_theme.html' %}
+{% load tz %}
 
 {% block content %}
 <br>
 <h1>{{ article.title|title }}</h1>
-<p>by {{ article.created_by.username }}, created {{ article.created }}, last modified {{ articles.modified }}</p>
+<h3>by {{ article.created_by.username }}</h3>
+<p>Created {{ article.created|timezone:"America/Denver" }}, Last Modified {{ article.modified|timezone:"America/Denver" }}</p>
 <br><hr><br><br>
 
 <br>
