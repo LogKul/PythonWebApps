@@ -1,23 +1,27 @@
-
-nav > div {
+nav>div {
     background-color: white;
 }
+
 .marginator {
     margin: 3%;
 }
+
 .bigcontainer {
     background-color: rgb(255, 200, 200);
 }
+
 .transcriptarea {
-    width: 50%;
+    width: 80%;
     padding: 60px;
     text-align: center;
     line-height: 32px;
     background-color: white;
 }
+
 .betterredborder {
     border: ridge 16px red;
 }
+
 .transcripttext {
     font-style: italic;
 }

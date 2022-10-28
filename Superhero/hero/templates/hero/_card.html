@@ -1,0 +1,14 @@
+{% load tz %}
+
+<div class="col-lg-4 my-3">
+    <!-- {{ card.width }} instead of col-lg-6 -->
+    <div class="card">
+        <div class="card-header">
+            <!-- {{ card.color }} -->
+            <h2><a href="{{ hero.pk }}">{{ hero.name }}</a></h2>
+        </div>
+        <div class="card-body text-dark p-5">
+            <a href="{{ hero.pk }}"><img src="{{ hero.photo.url }}" alt="{{ hero.name }}" height="150"></a>
+        </div>
+    </div>
+</div>

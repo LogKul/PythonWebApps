@@ -1,0 +1,20 @@
+{% load tz %}
+
+<div class="col-lg-6 my-3">
+    <!-- {{ card.width }} instead of col-lg-6 -->
+    <div class="card">
+        <div class="card-header">
+            <!-- {{ card.color }} -->
+            <h2><a href="{{ article.pk }}">{{ article.title }}</a></h2>
+            <h4>by {{ article.created_by.username }}</h4>
+            <h5>Created {{ article.created|timezone:"America/Denver" }}</h5>
+            <h5>Last Modified {{ article.modified|timezone:"America/Denver" }}</h5>
+        </div>
+        <div class="card-body text-dark p-5">
+            {% autoescape off %}
+            <p>{{ article.content }}</p>
+            {% endautoescape %}
+
+        </div>
+    </div>
+</div>

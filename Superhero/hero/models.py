@@ -11,7 +11,8 @@ class Superhero(models.Model):
     description = models.TextField(default="No description.")
     strength = models.CharField(max_length=100, default="No strengths.")
     weakness = models.CharField(max_length=100, default="No weaknesses.")
-    image = models.CharField(max_length=100, default="No image url.")
+    photo = models.ImageField(
+        upload_to='images', default='images/no_image.jpg')
 
     def __str__(self):
         return self.identity
@@ -29,3 +30,6 @@ class Article(models.Model):
 
     def get_absolute_url(self):
         return reverse_lazy('article_list')
+
+    class Meta:
+        ordering = ['-modified']

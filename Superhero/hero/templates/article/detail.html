@@ -9,7 +9,9 @@
 <br><hr><br><br>
 
 <br>
+{% autoescape off %}
 <p>{{ article.content }}</p>
+{% endautoescape %}
 <br>
 
 {% if request.user.username == article.created_by.username%}

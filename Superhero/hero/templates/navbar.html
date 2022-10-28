@@ -1,39 +1,39 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-danger text-dark">
+<nav class="navbar navbar-expand-sm navbar-dark bg-danger text-white">
 
-    <div class="container">
+    <div class="container bg-danger">
 
-        <a class="navbar-brand text-dark" href="/">Superhero Reports</a>
+        <a class="navbar-brand text-white" href="/">Superhero Reports</a>
 
-        <ul class="navbar-nav text-dark ml-auto">
+        <ul class="navbar-nav text-white ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{% url 'hero_list' %}">Superheros</a>
+                <a class="nav-link text-white" href="{% url 'hero_list' %}">Superheros</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{% url 'article_list' %}">Article List</a>
+                <a class="nav-link text-white" href="{% url 'article_list' %}">Article List</a>
             </li>
 
             {% if user.is_authenticated %}
 
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{% url 'article_add' %}">Write Article</a>
+                <a class="nav-link text-white" href="{% url 'article_add' %}">Write Article</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link  text-dark " href="{% url 'logout' %}">Hello {{ user.username }}</a>
+                <a class="nav-link text-white" href="{% url 'logout' %}">Hello {{ user.username }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  text-dark " href="{% url 'logout' %}">Log out</a>
+                <a class="nav-link text-white" href="{% url 'logout' %}">Log out</a>
             </li>
 
             {% else %}
 
             <li class="nav-item">
-                <a class="nav-link  text-dark " href="{% url 'login' %}">Log In</a>
+                <a class="nav-link text-white" href="{% url 'login' %}">Log In</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link  text-dark " href="{% url 'user_add' %}">Sign Up</a>
+                <a class="nav-link text-white" href="{% url 'user_add' %}">Sign Up</a>
             </li>
 
             {% endif %}

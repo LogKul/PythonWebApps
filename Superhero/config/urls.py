@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from hero.views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,4 +37,4 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/<int:pk>/', UserUpdateView.as_view(), name='user_edit'),
     path('accounts/add/', UserAddView.as_view(), name='user_add'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
