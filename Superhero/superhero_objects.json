@@ -1,0 +1,47 @@
+[
+    {
+        "id": 7,
+        "name": "Mob",
+        "identity": "Mob Psycho 100",
+        "description": "He's Insane!",
+        "strength": "Powerful psychic",
+        "weakness": "Weak physically",
+        "photo": "images/mob.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Wayne",
+        "identity": "Is Wayne",
+        "description": "Dissolution man",
+        "strength": "Clay",
+        "weakness": "Bomb",
+        "photo": "images/wayne_pZhGv3Z.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Golden Seedling",
+        "identity": "seedling",
+        "description": "Very golden",
+        "strength": "Strong",
+        "weakness": "Ice Rain",
+        "photo": "images/golden_seedling.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Super Monkey",
+        "identity": "Monkey",
+        "description": "Wears a cape",
+        "strength": "Lots of darts",
+        "weakness": "Expensive",
+        "photo": "images/super_monkey.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Little Ghost",
+        "identity": "Void",
+        "description": "Just a little guy",
+        "strength": "Nail",
+        "weakness": "Brittle",
+        "photo": "images/little_ghost.jpg"
+    }
+]

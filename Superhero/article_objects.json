@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Loch Ness Found",
+        "created_by_id": 1,
+        "created": "2022-10-11 21:51:24.548525+00:00",
+        "modified": "2022-10-28 20:27:19.098790+00:00",
+        "content": "They found it in the Lorem Ipsum River! Modified to bump to top? Articles sorted by modified date! Nice!"
+    },
+    {
+        "id": 2,
+        "title": "Harry Jenkins Saves The World",
+        "created_by_id": 1,
+        "created": "2022-10-11 21:54:12.794070+00:00",
+        "modified": "2022-10-27 17:23:45.021851+00:00",
+        "content": "Bottom text. I just updated this article as Harry J, and nobody else can! Which is how it should be! Articles updated around 9:38 AM 10/12/2022, to demonstrate that the \"date modified\" field is being updated correctly. Uh oh, it's 6 hours ahead, must be a timezone issue, will fix later today! There we go, should be fixed, although it's only a local fix for anybody following the America/Denver time zone. Editing right now fr!"
+    },
+    {
+        "id": 3,
+        "title": "SuperHeroFanDude Invades Website",
+        "created_by_id": 2,
+        "created": "2022-10-11 22:07:09.463529+00:00",
+        "modified": "2022-10-11 22:07:09.463529+00:00",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus viverra adipiscing at in tellus integer. Faucibus et molestie ac feugiat sed lectus vestibulum. Sed risus pretium quam vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Dictum non consectetur a erat. Nisi quis eleifend quam adipiscing. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Suspendisse faucibus interdum posuere lorem ipsum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Sed tempus urna et pharetra pharetra massa massa ultricies mi. Lorem dolor sed viverra ipsum. Congue eu consequat ac felis donec.\r\n\r\nPosuere morbi leo urna molestie at elementum eu facilisis. Pharetra magna ac placerat vestibulum lectus mauris. Donec enim diam vulputate ut pharetra sit amet aliquam id. Dolor morbi non arcu risus quis varius quam quisque id. Pharetra sit amet aliquam id diam. Risus feugiat in ante metus dictum at tempor. Scelerisque in dictum non consectetur a erat. Ac felis donec et odio pellentesque diam volutpat commodo. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Eu lobortis elementum nibh tellus molestie nunc.\r\n\r\nPretium nibh ipsum consequat nisl vel pretium lectus quam id. Viverra adipiscing at in tellus integer feugiat. Maecenas accumsan lacus vel facilisis volutpat est velit. Posuere lorem ipsum dolor sit amet. Adipiscing elit pellentesque habitant morbi tristique senectus et netus. Eros donec ac odio tempor orci dapibus ultrices in. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Et netus et malesuada fames ac turpis egestas sed. Lacus laoreet non curabitur gravida arcu."
+    }
+]
