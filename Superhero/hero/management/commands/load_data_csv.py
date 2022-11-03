@@ -37,7 +37,7 @@ def load_data():
                 file_reader = reader(f)
                 for row in file_reader:
                     Article.objects.get_or_create(
-                        title=row[0], created_by=int(row[1]), created=row[2], modified=row[3], content=row[4],)
+                        title=row[0], created_by_id=int(row[1]), created=row[2], modified=row[3], content=row[4],)
 
             print("\nArticle objects loaded successfully!")
         else:
