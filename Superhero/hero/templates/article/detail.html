@@ -6,9 +6,14 @@
 <h1>{{ article.title|title }}</h1>
 <h3>by {{ article.created_by.username }}</h3>
 <p>Created {{ article.created|timezone:"America/Denver" }}, Last Modified {{ article.modified|timezone:"America/Denver" }}</p>
-<br><hr><br><br>
+<br><hr><br>
 
-<br>
+{% if article.photo %}
+<img src="/media/{{ article.photo.photo }}" alt="{{ article.photo.title }}" height="300">
+<br><br><hr>
+{% endif %}
+
+<br><br>
 {% autoescape off %}
 <p>{{ article.content }}</p>
 {% endautoescape %}

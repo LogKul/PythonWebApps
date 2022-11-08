@@ -25,3 +25,8 @@ nav>div {
 .transcripttext {
     font-style: italic;
 }
+
+.carouselsize {
+    height: 75%;
+    width: 75%;
+}

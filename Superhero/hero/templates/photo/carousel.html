@@ -1,0 +1,14 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+<h1>Photos</h1>
+<br><hr><br>
+<div class="container m-5 m-auto">
+
+    {% include 'photo/_carousel.html' %}
+
+    <a href="/photo/" class="btn btn-outline-danger m-5">Table View</a>
+
+</div>
+
+{% endblock content %}

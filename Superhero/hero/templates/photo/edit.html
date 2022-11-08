@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h1>Edit Article</h1>
+<h1>Edit Photo</h1>
 <br>
 <div class="container m-5">
 
@@ -11,7 +11,7 @@
         {% csrf_token %}
         {{ form|crispy }}
 
-        <button class="btn btn-outline-danger m-5" type="submit">Save Article</button>
+        <button class="btn btn-outline-danger m-5" type="submit">Save Image</button>
 
     </form>
 

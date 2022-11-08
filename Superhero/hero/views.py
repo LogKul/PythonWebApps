@@ -71,7 +71,7 @@ class ArticleDetailView(DetailView):
 class ArticleAddView(LoginRequiredMixin, CreateView):
     template_name = 'article/add.html'
     model = Article
-    fields = ['title', 'content']
+    fields = ['title', 'content', 'photo']
 
     def form_valid(self, form):
         form.instance.created_by = self.request.user
@@ -81,10 +81,60 @@ class ArticleAddView(LoginRequiredMixin, CreateView):
 class ArticleEditView(LoginRequiredMixin, UpdateView):
     template_name = 'article/edit.html'
     model = Article
-    fields = ['title', 'content']
+    fields = ['title', 'content', 'photo']
 
 
 class ArticleDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'article/delete.html'
     model = Article
     success_url = reverse_lazy('article_list')
+
+
+class PhotoCreateView(LoginRequiredMixin, CreateView):
+    template_name = "photo/add.html"
+    model = Photo
+    fields = '__all__'
+
+
+class PhotoListView(ListView):
+    template_name = 'photo/list.html'
+    model = Photo
+    context_object_name = 'photos'
+
+
+class PhotoDetailView(DetailView):
+    template_name = 'photo/detail.html'
+    model = Photo
+    context_object_name = 'photo'
+
+
+class PhotoEditView(LoginRequiredMixin, UpdateView):
+    template_name = 'photo/edit.html'
+    model = Photo
+    fields = '__all__'
+
+
+class PhotoDeleteView(LoginRequiredMixin, DeleteView):
+    template_name = 'photo/delete.html'
+    model = Photo
+    success_url = reverse_lazy('photo_list')
+
+
+class PhotoCarouselView(TemplateView):
+    template_name = 'photo/carousel.html'
+
+    def get_context_data(self, **kwargs):
+        photos = Photo.objects.all()
+        carousel = carousel_data(photos)
+        return dict(title='Carousel View', carousel=carousel)
+
+
+def carousel_data(photos):
+
+    def photo_data(id, image):
+        x = dict(image_url=f"{image}", id=str(id), label=f"{image} {id}")
+        if id == 0:
+            x.update(active="active", aria='aria-current="true"')
+        return x
+
+    return [photo_data(id, photo.photo) for id, photo in enumerate(photos)]

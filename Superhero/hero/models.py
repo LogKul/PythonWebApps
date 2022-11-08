@@ -21,12 +21,23 @@ class Superhero(models.Model):
         return reverse_lazy('hero_list')
 
 
+class Photo(models.Model):
+    title = models.CharField(max_length=100)
+    photo = models.ImageField(
+        upload_to='images', default='images/no_image.jpg')
+
+    def get_absolute_url(self):
+        return reverse_lazy('photo_list')
+
+
 class Article(models.Model):
     title = models.CharField(max_length=100, default="My Article")
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     content = models.TextField(default="Article body")
+    photo = models.ForeignKey(
+        Photo, null=True, blank=True, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse_lazy('article_list')
