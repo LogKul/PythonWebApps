@@ -10,14 +10,15 @@ def build_code():
     # generate_software_planner()
     # generate_static_site
     # generate_course()
-    # generate_messenger()
+    generate_messenger()
     # generate_blog()
     # generate_book()
-    generate_hero()
+    # generate_hero()
 
 
 def generate_hero():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/')
+    project_path = Path(
+        'C:/Users/logan/OneDrive/School/Fall2022/Intermediate Web Design BACS350/BACS350/PythonWebApps/TestingBuilder')
     project_name = 'Superhero'
     project_app = 'hero'
     project_path = create_new_project(project_path, project_name)
@@ -25,7 +26,8 @@ def generate_hero():
 
 
 def generate_book():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/11')
+    project_path = Path(
+        'C:/Users/logan/OneDrive/School/Fall2022/Intermediate Web Design BACS350/BACS350/PythonWebApps/11')
     project_name = 'Book'
     project_app = 'book'
     project_path = create_new_project(project_path, project_name)
@@ -35,7 +37,8 @@ def generate_book():
 
 
 def generate_blog():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/08')
+    project_path = Path(
+        'C:/Users/logan/OneDrive/School/Fall2022/Intermediate Web Design BACS350/BACS350/PythonWebApps/TestingBuilder')
     project_name = 'Blog'
     project_app = 'blog'
     project_path = create_new_project(project_path, project_name)
@@ -44,7 +47,8 @@ def generate_blog():
 
 
 def generate_messenger():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/08')
+    project_path = Path(
+        'C:/Users/logan/OneDrive/School/Fall2022/Intermediate Web Design BACS350/BACS350/PythonWebApps/TestingBuilder')
     project_name = 'Messenger'
     project_app = 'messenger'
     project_path = create_new_project(project_path, project_name)
@@ -55,7 +59,8 @@ def generate_messenger():
 
 
 def generate_static_site():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/12')
+    project_path = Path(
+        'C:/Users/logan/OneDrive/School/Fall2022/Intermediate Web Design BACS350/BACS350/PythonWebApps/12')
     project_name = 'StaticSite'
     project_app = 'course'
     project_path = create_new_project(project_path, project_name)
@@ -65,7 +70,8 @@ def generate_static_site():
 
 
 def generate_software_planner():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/14')
+    project_path = Path(
+        'C:/Users/logan/OneDrive/School/Fall2022/Intermediate Web Design BACS350/BACS350/PythonWebApps/14')
     project_name = 'SoftwarePlanner'
     project_app = 'plan'
     project_path = create_new_project(project_path, project_name)
@@ -76,7 +82,8 @@ def generate_software_planner():
 
 
 def generate_course():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/15')
+    project_path = Path(
+        'C:/Users/logan/OneDrive/School/Fall2022/Intermediate Web Design BACS350/BACS350/PythonWebApps/15')
     project_name = 'Course'
     project_app = 'course'
     project_path = create_new_project(project_path, project_name)
@@ -115,7 +122,8 @@ def clone_code(project, object_name, class_name, module_name):
             text = text.replace(module1, module2)
             open(f2, 'w').write(text)
 
-    print(f'\n\nGenerating code\n    Class: {class_name}\n    Object: {module_name}\n')
+    print(
+        f'\n\nGenerating code\n    Class: {class_name}\n    Object: {module_name}\n')
 
     for f1 in prototypes_list():
         create_file_protoype(f1)

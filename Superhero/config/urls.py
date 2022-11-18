@@ -44,4 +44,6 @@ urlpatterns = [
     path('photo/<int:pk>/', PhotoEditView.as_view(), name='photo_edit'),
     path('photo/<int:pk>/delete', PhotoDeleteView.as_view(), name='photo_delete'),
     path('photo/carousel', PhotoCarouselView.as_view(), name='photo_carousel'),
+
+    path('', include('messenger.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

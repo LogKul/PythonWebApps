@@ -1,0 +1,20 @@
+{% extends 'theme.html' %}
+
+
+{% block title %}
+    List of Superheros
+{% endblock title %}
+
+
+{% block content %}
+
+    <h1>My Superheros</h1>
+
+    <div class="row">
+
+        {% include 'hero/_heros.html' %}
+
+    </div>
+
+{% endblock content %}
+

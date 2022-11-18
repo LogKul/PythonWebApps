@@ -1,0 +1,27 @@
+<div class="card col-lg">
+
+    <div class="card-header message">
+        Superhero
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+                <th>Superhero</th>
+                <th>Description</th>
+            </tr>
+
+            {% for hero in heros %}
+            <tr>
+                <td><a href="/hero/{{ hero.pk }}">{{ hero.title }}</a></td>
+                <td>{{ hero.body }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <p>
+            <a href="/hero/add" class="btn btn-success m-5">Add New Superhero</a>
+        </p>
+    </div>
+
+</div>
